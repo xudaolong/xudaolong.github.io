@@ -3,18 +3,37 @@
 <head>
   <meta charset="utf-8">
   
-  <title>jq进阶--解决jq版本冲突 | Valar Morghulis Valar Dohaeris</title>
+  <title>css进阶--隐藏节点 | Valar Morghulis Valar Dohaeris</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="整理以前的笔记。">
+  <meta name="description" content="1234.foo &amp;#123; display: none; &amp;#125;
+123.foo &amp;#123; visibility: hidden; &amp;#125;
+ 
+123.foo &amp;#123; opacity: 0; &amp;#125;
+
+12345678910.foo &amp;#123; position: absolute; top: -9999px; left: -9999px; &amp;#125; .foo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jq进阶--解决jq版本冲突">
-<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/index.html">
+<meta property="og:title" content="css进阶--隐藏节点">
+<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/css进阶-隐藏节点/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
-<meta property="og:description" content="整理以前的笔记。">
-<meta property="og:updated_time" content="2016-02-13T02:14:32.330Z">
+<meta property="og:description" content="1234.foo &amp;#123; display: none; &amp;#125;
+123.foo &amp;#123; visibility: hidden; &amp;#125;
+ 
+123.foo &amp;#123; opacity: 0; &amp;#125;
+
+12345678910.foo &amp;#123; position: absolute; top: -9999px; left: -9999px; &amp;#125; .foo">
+<meta property="og:image" content="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/6aa1c7cd-ec99-4d95-a070-db40dcfe0bfc.png">
+<meta property="og:image" content="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/50ffbea6-43c0-4516-b67b-1f017e48eb1b.png">
+<meta property="og:image" content="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/50ffbea6-43c0-4516-b67b-1f017e48eb1b.png">
+<meta property="og:image" content="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/6aa1c7cd-ec99-4d95-a070-db40dcfe0bfc.png">
+<meta property="og:updated_time" content="2016-02-13T03:05:35.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jq进阶--解决jq版本冲突">
-<meta name="twitter:description" content="整理以前的笔记。">
+<meta name="twitter:title" content="css进阶--隐藏节点">
+<meta name="twitter:description" content="1234.foo &amp;#123; display: none; &amp;#125;
+123.foo &amp;#123; visibility: hidden; &amp;#125;
+ 
+123.foo &amp;#123; opacity: 0; &amp;#125;
+
+12345678910.foo &amp;#123; position: absolute; top: -9999px; left: -9999px; &amp;#125; .foo">
   
     <link rel="alternative" href="/atom.xml" title="Valar Morghulis Valar Dohaeris" type="application/atom+xml">
   
@@ -204,11 +223,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-jq进阶-解决jq版本冲突" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-css进阶-隐藏节点" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/13/jq进阶-解决jq版本冲突/" class="article-date">
-      <time datetime="2016-02-13T02:13:54.000Z" itemprop="datePublished">2016-02-13</time>
+      <a href="/2016/02/13/css进阶-隐藏节点/" class="article-date">
+      <time datetime="2016-02-13T02:57:50.000Z" itemprop="datePublished">2016-02-13</time>
 </a>
     </div>
   
@@ -221,7 +240,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      jq进阶--解决jq版本冲突
+      css进阶--隐藏节点
     </h1>
   
 
@@ -229,16 +248,8 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/jquery/">jquery</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -246,11 +257,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="u4F7F_u7528_u58F0_u660E_u5E76_u4F7F_u7528juery_28_29"><a href="#u4F7F_u7528_u58F0_u660E_u5E76_u4F7F_u7528juery_28_29" class="headerlink" title="使用声明并使用juery()"></a>使用声明并使用juery()</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery.noConflict();                <span class="comment">//将变量$的控制权让渡给prototype.js</span></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                    <span class="comment">//使用jQuery</span></span><br><span class="line">    jQuery(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert( jQuery(<span class="keyword">this</span>).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u81EA_u5B9A_u4E49_u65B0juery_u5BF9_u8C61_u53D8_u91CF"><a href="#u81EA_u5B9A_u4E49_u65B0juery_u5BF9_u8C61_u53D8_u91CF" class="headerlink" title="自定义新juery对象变量"></a>自定义新juery对象变量</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">var <span class="variable">$j</span> = jQuery.noConflict();        //自定义一个比较短快捷方式</span><br><span class="line"><span class="variable">$j</span>(<span class="keyword">function</span>()&#123;                        //使用jQuery</span><br><span class="line">    <span class="variable">$j</span>(<span class="string">"p"</span>).click(function()&#123;</span><br><span class="line">        alert( <span class="variable">$j</span>(this).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        //使用prototype</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="u5185_u51FD_u6570_u5BF9_u8C61_u7684_u8C03_u7528"><a href="#u5185_u51FD_u6570_u5BF9_u8C61_u7684_u8C03_u7528" class="headerlink" title="内函数对象的调用"></a>内函数对象的调用</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery.noConflict();                <span class="comment">//将变量$的控制权让渡给prototype.js</span></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;                    <span class="comment">//使用jQuery</span></span><br><span class="line">    $(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        <span class="comment">//继续使用 $ 方法</span></span><br><span class="line">        alert( $(<span class="keyword">this</span>).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u533F_u540D_u51FD_u6570"><a href="#u533F_u540D_u51FD_u6570" class="headerlink" title="匿名函数"></a>匿名函数</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery.noConflict();                <span class="comment">//将变量$的控制权让渡给prototype.js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;                        <span class="comment">//定义匿名函数并设置形参为$</span></span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                    <span class="comment">//匿名函数内部的$均为jQuery</span></span><br><span class="line">        $(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    <span class="comment">//继续使用 $ 方法</span></span><br><span class="line">            alert($(<span class="keyword">this</span>).text());</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery);                            <span class="comment">//执行匿名函数且传递实参jQuery</span></span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u5148_u5BFC_u5165jquery__u2013_26gt_3B_u76F4_u63A5_u4F7F_u7528"><a href="#u5148_u5BFC_u5165jquery__u2013_26gt_3B_u76F4_u63A5_u4F7F_u7528" class="headerlink" title="先导入jquery –&gt;直接使用"></a>先导入jquery –&gt;直接使用</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--先导入jQuery --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"../../scripts/jquery-1.3.1.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--后导入其他库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"prototype-1.6.0.3.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span> </span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   <span class="comment">//直接使用 jQuery ,没有必要调用"jQuery.noConflict()"函数。</span></span><br><span class="line">    jQuery(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;      </span><br><span class="line">        alert( jQuery(<span class="keyword">this</span>).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>; <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class">.foo</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/6aa1c7cd-ec99-4d95-a070-db40dcfe0bfc.png" alt="css" title="css"><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.foo</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p> <img src="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/50ffbea6-43c0-4516-b67b-1f017e48eb1b.png" alt="css" title="css"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.foo</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">opacity</span>:<span class="value"> <span class="number">0</span></span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/50ffbea6-43c0-4516-b67b-1f017e48eb1b.png" alt="css" title="css"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.foo</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">top</span>:<span class="value"> -<span class="number">9999px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">left</span>:<span class="value"> -<span class="number">9999px</span></span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="class">.foo</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">clip</span>:<span class="value"> <span class="function">rect</span>(<span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span>)</span></span>; <span class="comment">/* syntax for IE6 &amp; IE7 */</span> </span><br><span class="line"><span class="rule"><span class="attribute">clip</span>:<span class="value"> <span class="function">rect</span>(<span class="number">1px</span>, <span class="number">1px</span>, <span class="number">1px</span>, <span class="number">1px</span>)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://note.wiz.cn/api/document/files/unzip/5c372b0c-434d-4b22-a6ee-5f18e059ba75/0ec830f9-8824-4d82-8b3b-08f3e5b37bde.3440/index_files/6aa1c7cd-ec99-4d95-a070-db40dcfe0bfc.png" alt="css" title="css"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">figure</span><span class="id">#oymyakon</span> <span class="rules">&#123; <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">0</span>)</span></span>; &#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;<span class="tag">figure</span> id=<span class="string">"oymyakon"</span> hidden&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">figure</span><span class="id">#oymyakon</span> <span class="rules">&#123; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>; &#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">figure</span><span class="id">#oymyakon</span> <span class="rules">&#123; <span class="rule"><span class="attribute">filter</span>:<span class="value"> <span class="function">blur</span>(<span class="number">100px</span>)</span></span>; &#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -259,13 +276,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/13/css进阶-隐藏节点/">css进阶--隐藏节点</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
-        <p><span>发布时间:</span>2016年02月13日 - 10时13分</p>
-        <p><span>最后更新:</span>2016年02月13日 - 10时14分</p>
+        <p><span>发布时间:</span>2016年02月13日 - 10时57分</p>
+        <p><span>最后更新:</span>2016年02月13日 - 11时05分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/02/13/jq进阶-解决jq版本冲突/" title="jq进阶--解决jq版本冲突">http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/13/css进阶-隐藏节点/" title="css进阶--隐藏节点">http://xudaolong.github.io/2016/02/13/css进阶-隐藏节点/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/css进阶-隐藏节点/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -278,18 +295,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/02/13/css进阶-实习中使用的css样式总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          css进阶--实习中使用的css样式总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/13/js进阶--提高编码性能/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js进阶--提高编码性能</div>
+    <a href="/2016/02/13/css进阶-实习中使用的css样式总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css进阶--实习中使用的css样式总结</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -300,7 +308,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F7F_u7528_u58F0_u660E_u5E76_u4F7F_u7528juery_28_29"><span class="toc-number">1.</span> <span class="toc-text">使用声明并使用juery()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u81EA_u5B9A_u4E49_u65B0juery_u5BF9_u8C61_u53D8_u91CF"><span class="toc-number">2.</span> <span class="toc-text">自定义新juery对象变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5185_u51FD_u6570_u5BF9_u8C61_u7684_u8C03_u7528"><span class="toc-number">3.</span> <span class="toc-text">内函数对象的调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u533F_u540D_u51FD_u6570"><span class="toc-number">4.</span> <span class="toc-text">匿名函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5148_u5BFC_u5165jquery__u2013_26gt_3B_u76F4_u63A5_u4F7F_u7528"><span class="toc-number">5.</span> <span class="toc-text">先导入jquery –>直接使用</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn {
@@ -362,7 +370,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/02/13/jq进阶-解决jq版本冲突/" data-title="jq进阶--解决jq版本冲突" data-url="http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/13/css进阶-隐藏节点/" data-title="css进阶--隐藏节点" data-url="http://xudaolong.github.io/2016/02/13/css进阶-隐藏节点/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -385,13 +393,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/02/13/css进阶-实习中使用的css样式总结/" title="上一篇: css进阶--实习中使用的css样式总结">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/02/13/js进阶--提高编码性能/" title="下一篇: js进阶--提高编码性能">
+            <a href="/2016/02/13/css进阶-实习中使用的css样式总结/" title="下一篇: css进阶--实习中使用的css样式总结">
                 <i class="fa fa-angle-right"></i>
             </a>
         
