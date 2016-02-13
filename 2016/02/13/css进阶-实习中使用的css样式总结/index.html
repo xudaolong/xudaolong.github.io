@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>css进阶--实习中使用的css样式总结 | Valar Morghulis Valar Dohaeris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="整理以前的笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css进阶--实习中使用的css样式总结">
+<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/css进阶-实习中使用的css样式总结/index.html">
+<meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
+<meta property="og:description" content="整理以前的笔记。">
+<meta property="og:updated_time" content="2016-02-13T02:32:37.778Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css进阶--实习中使用的css样式总结">
+<meta name="twitter:description" content="整理以前的笔记。">
+  
+    <link rel="alternative" href="/atom.xml" title="Valar Morghulis Valar Dohaeris" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">许道龙</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">凡人皆有一死 凡人皆需供奉</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="http://luuman.github.io/FrontEndGuide/V1/index.html">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/xudaolong" title="github">github</a>
+                            
+                                <a class="fl zhihu" target="_blank" href="http://zhihu.com/people/xu-dao-long" title="zhihu">zhihu</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/125857843" title="weibo">weibo</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/前端开发/" style="font-size: 20px;">前端开发</a>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">半个故事，一个人生，两情相愿，三生无憾。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">许道龙</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">许道龙</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">凡人皆有一死 凡人皆需供奉</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="http://luuman.github.io/FrontEndGuide/V1/index.html">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/xudaolong" title="github">github</a>
+                    
+                        <a class="zhihu" target="_blank" href="http://zhihu.com/people/xu-dao-long" title="zhihu">zhihu</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/125857843" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-css进阶-实习中使用的css样式总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/13/css进阶-实习中使用的css样式总结/" class="article-date">
+      <time datetime="2016-02-13T02:32:07.000Z" itemprop="datePublished">2016-02-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css进阶--实习中使用的css样式总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/css/">css</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="u9634_u5F71_u6846"><a href="#u9634_u5F71_u6846" class="headerlink" title="阴影框"></a>阴影框</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.out-shadow</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">margin-right</span>:<span class="value"><span class="number">10px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">5px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">1px</span> solid <span class="hexcolor">#ccc</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"><span class="number">5px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"><span class="number">5px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">border-radius</span>:<span class="value"><span class="number">5px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-webkit-box-shadow</span>:<span class="value"><span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>)</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-moz-box-shadow</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>)</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="function">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>)</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-webkit-transition</span>:<span class="value">all <span class="number">0.3s</span> ease</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-moz-transition</span>:<span class="value">all <span class="number">0.3s</span> ease</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-ms-transition</span>:<span class="value">all <span class="number">0.3s</span> ease</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-o-transition</span>:<span class="value">all <span class="number">0.3s</span> ease</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">transition</span>:<span class="value">all <span class="number">0.3s</span> ease</span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="class">.out-shadow</span><span class="pseudo">:hover</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">1px</span> solid <span class="function">rgba</span>(<span class="number">82</span>, <span class="number">168</span>, <span class="number">236</span>, <span class="number">0.6</span>)</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-webkit-box-shadow</span>:<span class="value"><span class="number">0</span> <span class="number">0</span> <span class="number">11px</span> <span class="function">rgba</span>(<span class="number">82</span>, <span class="number">168</span>, <span class="number">236</span>, <span class="number">0.6</span>)</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-moz-box-shadow</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">11px</span> <span class="function">rgba</span>(<span class="number">82</span>, <span class="number">168</span>, <span class="number">236</span>, <span class="number">0.6</span>)</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> <span class="number">0</span> <span class="number">0</span> <span class="number">11px</span> <span class="function">rgba</span>(<span class="number">82</span>, <span class="number">168</span>, <span class="number">236</span>, <span class="number">0.6</span>)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3Anot_28_29__u5728_u83DC_u5355_u4E0A_u5E94_u7528/_u53D6_u6D88_u5E94_u7528_u8FB9_u6846"><a href="#3Anot_28_29__u5728_u83DC_u5355_u4E0A_u5E94_u7528/_u53D6_u6D88_u5E94_u7528_u8FB9_u6846" class="headerlink" title=":not() 在菜单上应用/取消应用边框"></a>:not() 在菜单上应用/取消应用边框</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.nav</span> <span class="tag">li</span><span class="pseudo">:not(</span><span class="pseudo">:last-child)</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">border-right</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#666</span></span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="class">.nav</span> <span class="tag">li</span><span class="pseudo">:first-child</span> ~ <span class="tag">li</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5782_u76F4_u5C45_u4E2D"><a href="#u5782_u76F4_u5C45_u4E2D" class="headerlink" title="垂直居中"></a>垂直居中</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">html</span>, <span class="tag">body</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100%</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="tag">body</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">-webkit-align-items</span>:<span class="value"> center</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-ms-flex-align</span>:<span class="value"> center</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">align-items</span>:<span class="value"> center</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-flex</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u9017_u53F7_u5206_u9694_u7684_u5217_u8868"><a href="#u9017_u53F7_u5206_u9694_u7684_u5217_u8868" class="headerlink" title="逗号分隔的列表"></a>逗号分隔的列表</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">ul</span> &gt; <span class="tag">li</span><span class="pseudo">:not(</span><span class="pseudo">:last-child)</span><span class="pseudo">::after</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">content</span>:<span class="value"> “,”</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u4F7F_u7528_u8D1F_u7684_nth-child__u9009_u62E9_u9879_u76EE"><a href="#u4F7F_u7528_u8D1F_u7684_nth-child__u9009_u62E9_u9879_u76EE" class="headerlink" title="使用负的 nth-child 选择项目"></a>使用负的 nth-child 选择项目</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">li</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> none</span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="comment">/* select items 1 through 3 and display them */</span> </span><br><span class="line"><span class="tag">li</span><span class="pseudo">:nth-child(-n+3)</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5BF9_u56FE_u6807_u4F7F_u7528SVG"><a href="#u5BF9_u56FE_u6807_u4F7F_u7528SVG" class="headerlink" title="对图标使用SVG"></a>对图标使用SVG</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.logo</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(“logo.svg”)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u4F18_u5316_u663E_u793A_u6587_u672C"><a href="#u4F18_u5316_u663E_u793A_u6587_u672C" class="headerlink" title="优化显示文本"></a>优化显示文本</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">html</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">-moz-osx-font-smoothing</span>:<span class="value"> grayscale</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">-webkit-font-smoothing</span>:<span class="value"> antialiased</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">text-rendering</span>:<span class="value"> optimizeLegibility</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5BF9_u7EAFCSS_u6ED1_u5757_u4F7F_u7528_max-height"><a href="#u5BF9_u7EAFCSS_u6ED1_u5757_u4F7F_u7528_max-height" class="headerlink" title="对纯CSS滑块使用 max-height"></a>对纯CSS滑块使用 max-height</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.slider</span> <span class="tag">ul</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">max-height</span>:<span class="value"> <span class="number">0</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">overlow</span>:<span class="value"> hidden</span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="class">.slider</span><span class="pseudo">:hover</span> <span class="tag">ul</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">max-height</span>:<span class="value"> <span class="number">1000px</span></span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">transition</span>:<span class="value"> .<span class="number">3s</span> ease</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u7EE7_u627F_box-sizing"><a href="#u7EE7_u627F_box-sizing" class="headerlink" title="继承 box-sizing"></a>继承 box-sizing</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">html</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line">, <span class="pseudo">:before</span>, *<span class="pseudo">:after</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> inherit</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u8868_u683C_u5355_u5143_u683C_u7B49_u5BBD"><a href="#u8868_u683C_u5355_u5143_u683C_u7B49_u5BBD" class="headerlink" title="表格单元格等宽"></a>表格单元格等宽</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.calendar</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u6446_u8131_u5916_u8FB9_u8DDD_u7684_u5404_u79CDhack"><a href="#u6446_u8131_u5916_u8FB9_u8DDD_u7684_u5404_u79CDhack" class="headerlink" title="摆脱外边距的各种hack"></a>摆脱外边距的各种hack</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.list</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>; </span><br><span class="line"><span class="rule"><span class="attribute">justify-content</span>:<span class="value"> space-between</span></span>; </span><br><span class="line">&#125;</span> </span><br><span class="line"><span class="class">.list</span> <span class="class">.person</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">flex-basis</span>:<span class="value"> <span class="number">23%</span></span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u4F7F_u7528_u5C5E_u6027_u9009_u62E9_u5668_u7528_u4E8E_u7A7A_u94FE_u63A5"><a href="#u4F7F_u7528_u5C5E_u6027_u9009_u62E9_u5668_u7528_u4E8E_u7A7A_u94FE_u63A5" class="headerlink" title="使用属性选择器用于空链接"></a>使用属性选择器用于空链接</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">a</span><span class="attr_selector">[href^=”http”]</span><span class="pseudo">:empty</span><span class="pseudo">::before</span> <span class="rules">&#123; </span><br><span class="line"><span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="function">attr</span>(href)</span></span>; </span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u9632_u6B62_u6076_u610F_u7684_u8F93_u5165"><a href="#u9632_u6B62_u6076_u610F_u7684_u8F93_u5165" class="headerlink" title="防止恶意的输入"></a>防止恶意的输入</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: -webkit-box; </span><br><span class="line"><span class="attribute">-webkit-line-clamp</span>: <span class="number">1</span>; </span><br><span class="line"><span class="attribute">-webkit-box-orient</span>: vertical; </span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">text-align</span>: justify;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
+        <p><span>发布时间:</span>2016年02月13日 - 10时32分</p>
+        <p><span>最后更新:</span>2016年02月13日 - 10时32分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/13/css进阶-实习中使用的css样式总结/" title="css进阶--实习中使用的css样式总结">http://xudaolong.github.io/2016/02/13/css进阶-实习中使用的css样式总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/css进阶-实习中使用的css样式总结/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/13/jq进阶-解决jq版本冲突/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jq进阶--解决jq版本冲突</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u9634_u5F71_u6846"><span class="toc-number">1.</span> <span class="toc-text">阴影框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3Anot_28_29__u5728_u83DC_u5355_u4E0A_u5E94_u7528/_u53D6_u6D88_u5E94_u7528_u8FB9_u6846"><span class="toc-number">2.</span> <span class="toc-text">:not() 在菜单上应用/取消应用边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5782_u76F4_u5C45_u4E2D"><span class="toc-number">3.</span> <span class="toc-text">垂直居中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u9017_u53F7_u5206_u9694_u7684_u5217_u8868"><span class="toc-number">4.</span> <span class="toc-text">逗号分隔的列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F7F_u7528_u8D1F_u7684_nth-child__u9009_u62E9_u9879_u76EE"><span class="toc-number">5.</span> <span class="toc-text">使用负的 nth-child 选择项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5BF9_u56FE_u6807_u4F7F_u7528SVG"><span class="toc-number">6.</span> <span class="toc-text">对图标使用SVG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F18_u5316_u663E_u793A_u6587_u672C"><span class="toc-number">7.</span> <span class="toc-text">优化显示文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5BF9_u7EAFCSS_u6ED1_u5757_u4F7F_u7528_max-height"><span class="toc-number">8.</span> <span class="toc-text">对纯CSS滑块使用 max-height</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7EE7_u627F_box-sizing"><span class="toc-number">9.</span> <span class="toc-text">继承 box-sizing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8868_u683C_u5355_u5143_u683C_u7B49_u5BBD"><span class="toc-number">10.</span> <span class="toc-text">表格单元格等宽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6446_u8131_u5916_u8FB9_u8DDD_u7684_u5404_u79CDhack"><span class="toc-number">11.</span> <span class="toc-text">摆脱外边距的各种hack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F7F_u7528_u5C5E_u6027_u9009_u62E9_u5668_u7528_u4E8E_u7A7A_u94FE_u63A5"><span class="toc-number">12.</span> <span class="toc-text">使用属性选择器用于空链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u9632_u6B62_u6076_u610F_u7684_u8F93_u5165"><span class="toc-number">13.</span> <span class="toc-text">防止恶意的输入</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/02/13/css进阶-实习中使用的css样式总结/" data-title="css进阶--实习中使用的css样式总结" data-url="http://xudaolong.github.io/2016/02/13/css进阶-实习中使用的css样式总结/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xudaolong"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/02/13/jq进阶-解决jq版本冲突/" title="下一篇: jq进阶--解决jq版本冲突">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 许道龙
+            </div>
+            <div class="footer-right">
+                
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 21;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+  </div>
+</body>
+</html>
