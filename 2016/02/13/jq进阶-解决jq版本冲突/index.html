@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>js进阶--DOM扩展--&gt;元素遍历 | Valar Morghulis Valar Dohaeris</title>
+  <title>jq进阶--解决jq版本冲突 | Valar Morghulis Valar Dohaeris</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="整理以前的笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js进阶--DOM扩展-->元素遍历">
-<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/index.html">
+<meta property="og:title" content="jq进阶--解决jq版本冲突">
+<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
 <meta property="og:description" content="整理以前的笔记。">
-<meta property="og:updated_time" content="2016-02-13T00:02:38.083Z">
+<meta property="og:updated_time" content="2016-02-13T02:14:32.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js进阶--DOM扩展-->元素遍历">
+<meta name="twitter:title" content="jq进阶--解决jq版本冲突">
 <meta name="twitter:description" content="整理以前的笔记。">
   
     <link rel="alternative" href="/atom.xml" title="Valar Morghulis Valar Dohaeris" type="application/atom+xml">
@@ -204,11 +204,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-js进阶--DOM扩展--元素遍历" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jq进阶-解决jq版本冲突" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/13/js进阶--DOM扩展--元素遍历/" class="article-date">
-      <time datetime="2016-02-12T16:32:43.000Z" itemprop="datePublished">2016-02-13</time>
+      <a href="/2016/02/13/jq进阶-解决jq版本冲突/" class="article-date">
+      <time datetime="2016-02-13T02:13:54.000Z" itemprop="datePublished">2016-02-13</time>
 </a>
     </div>
   
@@ -221,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js进阶--DOM扩展--&gt;元素遍历
+      jq进阶--解决jq版本冲突
     </h1>
   
 
@@ -230,13 +230,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+    <a class="article-category-link" href="/categories/jquery/">jquery</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -246,8 +246,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="u5E38_u89C1_u7684_u904D_u5386"><a href="#u5E38_u89C1_u7684_u904D_u5386" class="headerlink" title="常见的遍历"></a>常见的遍历</h2><h3 id="u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><a href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20" class="headerlink" title="遍历某元素的所有子元素"></a>遍历某元素的所有子元素</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastChild)&#123;</span><br><span class="line">    <span class="keyword">if</span>(child.nodeType == <span class="number">1</span>)&#123; <span class="comment">//检查是不是元素</span></span><br><span class="line">        processChild(child);</span><br><span class="line">    &#125;</span><br><span class="line">    child = child.nextSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="u73B0_u5728_u7684_u65B9_u6CD5"><a href="#u73B0_u5728_u7684_u65B9_u6CD5" class="headerlink" title="现在的方法"></a>现在的方法</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstelementChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastelementChild)&#123;</span><br><span class="line">    processChild(child);  <span class="comment">//已经知道是元素</span></span><br><span class="line">    child = child.nextelementSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="u4F7F_u7528_u58F0_u660E_u5E76_u4F7F_u7528juery_28_29"><a href="#u4F7F_u7528_u58F0_u660E_u5E76_u4F7F_u7528juery_28_29" class="headerlink" title="使用声明并使用juery()"></a>使用声明并使用juery()</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery.noConflict();                <span class="comment">//将变量$的控制权让渡给prototype.js</span></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                    <span class="comment">//使用jQuery</span></span><br><span class="line">    jQuery(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert( jQuery(<span class="keyword">this</span>).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u81EA_u5B9A_u4E49_u65B0juery_u5BF9_u8C61_u53D8_u91CF"><a href="#u81EA_u5B9A_u4E49_u65B0juery_u5BF9_u8C61_u53D8_u91CF" class="headerlink" title="自定义新juery对象变量"></a>自定义新juery对象变量</h2><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">var <span class="variable">$j</span> = jQuery.noConflict();        //自定义一个比较短快捷方式</span><br><span class="line"><span class="variable">$j</span>(<span class="keyword">function</span>()&#123;                        //使用jQuery</span><br><span class="line">    <span class="variable">$j</span>(<span class="string">"p"</span>).click(function()&#123;</span><br><span class="line">        alert( <span class="variable">$j</span>(this).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        //使用prototype</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="u5185_u51FD_u6570_u5BF9_u8C61_u7684_u8C03_u7528"><a href="#u5185_u51FD_u6570_u5BF9_u8C61_u7684_u8C03_u7528" class="headerlink" title="内函数对象的调用"></a>内函数对象的调用</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery.noConflict();                <span class="comment">//将变量$的控制权让渡给prototype.js</span></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;                    <span class="comment">//使用jQuery</span></span><br><span class="line">    $(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        <span class="comment">//继续使用 $ 方法</span></span><br><span class="line">        alert( $(<span class="keyword">this</span>).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u533F_u540D_u51FD_u6570"><a href="#u533F_u540D_u51FD_u6570" class="headerlink" title="匿名函数"></a>匿名函数</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery.noConflict();                <span class="comment">//将变量$的控制权让渡给prototype.js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;                        <span class="comment">//定义匿名函数并设置形参为$</span></span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                    <span class="comment">//匿名函数内部的$均为jQuery</span></span><br><span class="line">        $(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    <span class="comment">//继续使用 $ 方法</span></span><br><span class="line">            alert($(<span class="keyword">this</span>).text());</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery);                            <span class="comment">//执行匿名函数且传递实参jQuery</span></span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>;        <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5148_u5BFC_u5165jquery__u2013_26gt_3B_u76F4_u63A5_u4F7F_u7528"><a href="#u5148_u5BFC_u5165jquery__u2013_26gt_3B_u76F4_u63A5_u4F7F_u7528" class="headerlink" title="先导入jquery –&gt;直接使用"></a>先导入jquery –&gt;直接使用</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--先导入jQuery --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"../../scripts/jquery-1.3.1.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--后导入其他库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"prototype-1.6.0.3.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span> </span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   <span class="comment">//直接使用 jQuery ,没有必要调用"jQuery.noConflict()"函数。</span></span><br><span class="line">    jQuery(<span class="string">"p"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;      </span><br><span class="line">        alert( jQuery(<span class="keyword">this</span>).text() );</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"pp"</span>).style.display = <span class="string">'none'</span>; <span class="comment">//使用prototype</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -255,13 +259,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展--&gt;元素遍历</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
-        <p><span>发布时间:</span>2016年02月13日 - 00时32分</p>
-        <p><span>最后更新:</span>2016年02月13日 - 08时02分</p>
+        <p><span>发布时间:</span>2016年02月13日 - 10时13分</p>
+        <p><span>最后更新:</span>2016年02月13日 - 10时14分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/02/13/js进阶--DOM扩展--元素遍历/" title="js进阶--DOM扩展--&gt;元素遍历">http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/13/jq进阶-解决jq版本冲突/" title="jq进阶--解决jq版本冲突">http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -274,15 +278,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/02/13/js进阶--提高编码性能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          js进阶--提高编码性能
-        
-      </div>
-    </a>
   
+    <a href="/2016/02/13/js进阶--提高编码性能/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js进阶--提高编码性能</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -291,7 +291,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C1_u7684_u904D_u5386"><span class="toc-number">1.</span> <span class="toc-text">常见的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">遍历某元素的所有子元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u73B0_u5728_u7684_u65B9_u6CD5"><span class="toc-number">1.2.</span> <span class="toc-text">现在的方法</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4F7F_u7528_u58F0_u660E_u5E76_u4F7F_u7528juery_28_29"><span class="toc-number">1.</span> <span class="toc-text">使用声明并使用juery()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u81EA_u5B9A_u4E49_u65B0juery_u5BF9_u8C61_u53D8_u91CF"><span class="toc-number">2.</span> <span class="toc-text">自定义新juery对象变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5185_u51FD_u6570_u5BF9_u8C61_u7684_u8C03_u7528"><span class="toc-number">3.</span> <span class="toc-text">内函数对象的调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u533F_u540D_u51FD_u6570"><span class="toc-number">4.</span> <span class="toc-text">匿名函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5148_u5BFC_u5165jquery__u2013_26gt_3B_u76F4_u63A5_u4F7F_u7528"><span class="toc-number">5.</span> <span class="toc-text">先导入jquery –>直接使用</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -353,7 +353,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/02/13/js进阶--DOM扩展--元素遍历/" data-title="js进阶--DOM扩展--&gt;元素遍历" data-url="http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/13/jq进阶-解决jq版本冲突/" data-title="jq进阶--解决jq版本冲突" data-url="http://xudaolong.github.io/2016/02/13/jq进阶-解决jq版本冲突/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -376,13 +376,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/02/13/js进阶--提高编码性能/" title="上一篇: js进阶--提高编码性能">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/02/13/js进阶--提高编码性能/" title="下一篇: js进阶--提高编码性能">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
