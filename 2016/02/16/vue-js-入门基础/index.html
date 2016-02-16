@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>js进阶--DOM扩展--&gt;元素遍历 | Valar Morghulis Valar Dohaeris</title>
+  <title>vue.js-入门基础 | Valar Morghulis Valar Dohaeris</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="整理以前的笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js进阶--DOM扩展-->元素遍历">
-<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/index.html">
+<meta property="og:title" content="vue.js-入门基础">
+<meta property="og:url" content="http://xudaolong.github.io/2016/02/16/vue-js-入门基础/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
 <meta property="og:description" content="整理以前的笔记。">
-<meta property="og:updated_time" content="2016-02-13T00:02:38.083Z">
+<meta property="og:updated_time" content="2016-02-16T14:54:13.622Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js进阶--DOM扩展-->元素遍历">
+<meta name="twitter:title" content="vue.js-入门基础">
 <meta name="twitter:description" content="整理以前的笔记。">
   
     <link rel="alternative" href="/atom.xml" title="Valar Morghulis Valar Dohaeris" type="application/atom+xml">
@@ -204,11 +204,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-js进阶--DOM扩展--元素遍历" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vue-js-入门基础" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/13/js进阶--DOM扩展--元素遍历/" class="article-date">
-      <time datetime="2016-02-12T16:32:43.000Z" itemprop="datePublished">2016-02-13</time>
+      <a href="/2016/02/16/vue-js-入门基础/" class="article-date">
+      <time datetime="2016-02-16T14:52:23.000Z" itemprop="datePublished">2016-02-16</time>
 </a>
     </div>
   
@@ -221,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js进阶--DOM扩展--&gt;元素遍历
+      vue.js-入门基础
     </h1>
   
 
@@ -230,13 +230,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+    <a class="article-category-link" href="/categories/vue-js/">vue.js</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-js/">vue.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -246,8 +246,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="u5E38_u89C1_u7684_u904D_u5386"><a href="#u5E38_u89C1_u7684_u904D_u5386" class="headerlink" title="常见的遍历"></a>常见的遍历</h2><h3 id="u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><a href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20" class="headerlink" title="遍历某元素的所有子元素"></a>遍历某元素的所有子元素</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastChild)&#123;</span><br><span class="line">    <span class="keyword">if</span>(child.nodeType == <span class="number">1</span>)&#123; <span class="comment">//检查是不是元素</span></span><br><span class="line">        processChild(child);</span><br><span class="line">    &#125;</span><br><span class="line">    child = child.nextSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="u73B0_u5728_u7684_u65B9_u6CD5"><a href="#u73B0_u5728_u7684_u65B9_u6CD5" class="headerlink" title="现在的方法"></a>现在的方法</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstelementChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastelementChild)&#123;</span><br><span class="line">    processChild(child);  <span class="comment">//已经知道是元素</span></span><br><span class="line">    child = child.nextelementSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--v-model:双向绑定--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"bind2way"</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--* 这个是单次绑定 后面的操作对此不影响--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">p</span>&gt;</span></span><span class="expression">&#123;&#123;* <span class="variable">message</span> &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-model</span>=<span class="value">"message"</span> <span class="attribute">v-on:keyup.enter</span>=<span class="value">"addTodo"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"temporary in todos"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">span</span>&gt;</span></span><span class="expression">&#123;&#123; <span class="variable">temporary.text</span> &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"removeTodo($index)"</span>&gt;</span>删除<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--v-on:click:处理用户输入--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"reverseMessage"</span>&gt;</span>倒序<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--3个括号显示html--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span>&gt;</span></span><span class="expression">&#123;&#123;&#123; <span class="variable">raw</span>_<span class="variable">html</span> &#125;&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--v-for:渲染列表--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"apply_list"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">li</span> <span class="attribute">v-for</span>=<span class="value">"temporary in li_list"</span>&gt;</span></span><br><span class="line">			</span><span class="expression">&#123;&#123; <span class="variable">temporary.text</span> &#125;&#125;</span><span class="xml"></span><br><span class="line">		<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"js/vue.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"js/vue_init.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*v-model:双向绑定*/</span></span><br><span class="line">var bind2way = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	el: <span class="string">'#bind2way'</span>,</span><br><span class="line">	data: &#123;</span><br><span class="line">		message: <span class="string">'bind2way!'</span>,</span><br><span class="line">		raw_html: <span class="string">'&lt;a&gt;显示bind2way_html&lt;/a&gt;'</span>,</span><br><span class="line">		todos: [&#123;</span><br><span class="line">			<span class="built_in">text</span>: <span class="string">'get'</span></span><br><span class="line">		&#125;, &#123;</span><br><span class="line">			<span class="built_in">text</span>: <span class="string">'put'</span></span><br><span class="line">		&#125;, &#123;</span><br><span class="line">			<span class="built_in">text</span>: <span class="string">'get_put'</span></span><br><span class="line">		&#125;]</span><br><span class="line">	&#125;,</span><br><span class="line">	methods: &#123;</span><br><span class="line">		addTodo: function() &#123;</span><br><span class="line">			var <span class="built_in">text</span> = <span class="keyword">this</span>.message.<span class="built_in">trim</span>();</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">text</span>) &#123;</span><br><span class="line">				<span class="keyword">this</span>.todos.push(&#123;</span><br><span class="line">					<span class="built_in">text</span>: <span class="built_in">text</span></span><br><span class="line">				&#125;)</span><br><span class="line">				<span class="keyword">this</span>.message = <span class="string">''</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		reverseMessage: function() &#123;</span><br><span class="line">			<span class="comment">/*倒序data.message*/</span></span><br><span class="line">			<span class="keyword">this</span>.message = <span class="keyword">this</span>.message.<span class="built_in">split</span>(<span class="string">''</span>).<span class="built_in">reverse</span>().<span class="built_in">join</span>(<span class="string">''</span>);</span><br><span class="line">		&#125;,</span><br><span class="line">		removeTodo: function(index) &#123;</span><br><span class="line">			<span class="keyword">this</span>.todos.<span class="built_in">splice</span>(index, <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*v-for:渲染列表*/</span></span><br><span class="line">var apply_list = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">	el: <span class="string">'#apply_list'</span>,</span><br><span class="line">	data: &#123;</span><br><span class="line">		li_list: [&#123;</span><br><span class="line">			<span class="built_in">text</span>: <span class="string">'get'</span></span><br><span class="line">		&#125;, &#123;</span><br><span class="line">			<span class="built_in">text</span>: <span class="string">'put'</span></span><br><span class="line">		&#125;, &#123;</span><br><span class="line">			<span class="built_in">text</span>: <span class="string">'get_put'</span></span><br><span class="line">		&#125;]</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -255,13 +255,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展--&gt;元素遍历</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/16/vue-js-入门基础/">vue.js-入门基础</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
-        <p><span>发布时间:</span>2016年02月13日 - 00时32分</p>
-        <p><span>最后更新:</span>2016年02月13日 - 08时02分</p>
+        <p><span>发布时间:</span>2016年02月16日 - 22时52分</p>
+        <p><span>最后更新:</span>2016年02月16日 - 22时54分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/02/13/js进阶--DOM扩展--元素遍历/" title="js进阶--DOM扩展--&gt;元素遍历">http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/16/vue-js-入门基础/" title="vue.js-入门基础">http://xudaolong.github.io/2016/02/16/vue-js-入门基础/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/16/vue-js-入门基础/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -274,15 +274,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/02/13/js进阶--提高编码性能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          js进阶--提高编码性能
-        
-      </div>
-    </a>
   
+    <a href="/2016/02/13/css进阶-隐藏节点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css进阶--隐藏节点</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -291,7 +287,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C1_u7684_u904D_u5386"><span class="toc-number">1.</span> <span class="toc-text">常见的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">遍历某元素的所有子元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u73B0_u5728_u7684_u65B9_u6CD5"><span class="toc-number">1.2.</span> <span class="toc-text">现在的方法</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#html"><span class="toc-number">1.</span> <span class="toc-text">html</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">2.</span> <span class="toc-text">js</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -353,7 +349,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/02/13/js进阶--DOM扩展--元素遍历/" data-title="js进阶--DOM扩展--&gt;元素遍历" data-url="http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/16/vue-js-入门基础/" data-title="vue.js-入门基础" data-url="http://xudaolong.github.io/2016/02/16/vue-js-入门基础/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -376,13 +372,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/02/13/js进阶--提高编码性能/" title="上一篇: js进阶--提高编码性能">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/02/13/css进阶-隐藏节点/" title="下一篇: css进阶--隐藏节点">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/vue-js-入门基础/">vue.js-入门基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-隐藏节点/">css进阶--隐藏节点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
