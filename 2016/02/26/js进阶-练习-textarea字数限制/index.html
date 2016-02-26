@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>js进阶--DOM扩展--&gt;元素遍历 | Valar Morghulis Valar Dohaeris</title>
+  <title>js进阶-练习-textarea字数限制 | Valar Morghulis Valar Dohaeris</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="整理以前的笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js进阶--DOM扩展-->元素遍历">
-<meta property="og:url" content="http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/index.html">
+<meta property="og:title" content="js进阶-练习-textarea字数限制">
+<meta property="og:url" content="http://xudaolong.github.io/2016/02/26/js进阶-练习-textarea字数限制/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
 <meta property="og:description" content="整理以前的笔记。">
-<meta property="og:updated_time" content="2016-02-13T00:02:40.000Z">
+<meta property="og:updated_time" content="2016-02-26T01:11:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js进阶--DOM扩展-->元素遍历">
+<meta name="twitter:title" content="js进阶-练习-textarea字数限制">
 <meta name="twitter:description" content="整理以前的笔记。">
   
     <link rel="alternative" href="/atom.xml" title="Valar Morghulis Valar Dohaeris" type="application/atom+xml">
@@ -204,11 +204,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-js进阶--DOM扩展--元素遍历" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js进阶-练习-textarea字数限制" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/13/js进阶--DOM扩展--元素遍历/" class="article-date">
-      <time datetime="2016-02-12T16:32:43.000Z" itemprop="datePublished">2016-02-13</time>
+      <a href="/2016/02/26/js进阶-练习-textarea字数限制/" class="article-date">
+      <time datetime="2016-02-26T01:07:16.000Z" itemprop="datePublished">2016-02-26</time>
 </a>
     </div>
   
@@ -221,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js进阶--DOM扩展--&gt;元素遍历
+      js进阶-练习-textarea字数限制
     </h1>
   
 
@@ -236,7 +236,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -246,8 +246,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="u5E38_u89C1_u7684_u904D_u5386"><a href="#u5E38_u89C1_u7684_u904D_u5386" class="headerlink" title="常见的遍历"></a>常见的遍历</h2><h3 id="u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><a href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20" class="headerlink" title="遍历某元素的所有子元素"></a>遍历某元素的所有子元素</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastChild)&#123;</span><br><span class="line">    <span class="keyword">if</span>(child.nodeType == <span class="number">1</span>)&#123; <span class="comment">//检查是不是元素</span></span><br><span class="line">        processChild(child);</span><br><span class="line">    &#125;</span><br><span class="line">    child = child.nextSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="u73B0_u5728_u7684_u65B9_u6CD5"><a href="#u73B0_u5728_u7684_u65B9_u6CD5" class="headerlink" title="现在的方法"></a>现在的方法</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstelementChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastelementChild)&#123;</span><br><span class="line">    processChild(child);  <span class="comment">//已经知道是元素</span></span><br><span class="line">    child = child.nextelementSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init_textarea</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//先选出 textarea 和 统计字数 dom 节点</span></span><br><span class="line">    <span class="keyword">var</span> textArea = $(<span class="string">"#news_content"</span>),word = $(<span class="string">".news_content_word"</span>);</span><br><span class="line">    <span class="comment">//调用</span></span><br><span class="line">    statInputNum(textArea,word);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 剩余字数统计</span><br><span class="line"> * 注意 最大字数只需要在放数字的节点哪里直接写好即可 如：&lt;var class="word"&gt;200&lt;/var&gt;</span><br><span class="line"> */</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">statInputNum</span>(<span class="params">textArea,numItem</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> max = numItem.text(),curLength;</span><br><span class="line">     textArea[<span class="number">0</span>].setAttribute(<span class="string">"maxlength"</span>, max);</span><br><span class="line">     curLength = textArea.val().length;</span><br><span class="line">     numItem.text(max - curLength);</span><br><span class="line">     textArea.on(<span class="string">'input propertychange'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    	 <span class="keyword">if</span>($(<span class="keyword">this</span>).val().length &lt;= max )&#123;</span><br><span class="line">    		 numItem.text(max - $(<span class="keyword">this</span>).val().length);</span><br><span class="line">    	 &#125;</span><br><span class="line">     &#125;);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea id=<span class="string">"news_content"</span> placeholder=<span class="string">"请输入推送的消息"</span> wrap=<span class="string">"hard"</span>&gt;&lt;/textarea&gt;</span><br><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">"tex_black"</span>&gt;&lt;/div&gt;<span class="comment">//预留空白的</span></span><br><span class="line">&lt;span <span class="keyword">class</span>=<span class="string">"wordwrap"</span>&gt;&lt;<span class="keyword">var</span> <span class="keyword">class</span>=<span class="string">" news_content_word"</span> style=<span class="string">"font-style: normal;color: #A9A9A9;"</span>&gt;<span class="number">140</span>&lt;/<span class="keyword">var</span>&gt;/<span class="number">140</span>&lt;/span&gt;<span class="comment">//浮动模块</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -255,13 +255,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展--&gt;元素遍历</a></p>
+        <p><span>本文标题:</span><a href="/2016/02/26/js进阶-练习-textarea字数限制/">js进阶-练习-textarea字数限制</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
-        <p><span>发布时间:</span>2016年02月13日 - 00时32分</p>
-        <p><span>最后更新:</span>2016年02月13日 - 08时02分</p>
+        <p><span>发布时间:</span>2016年02月26日 - 09时07分</p>
+        <p><span>最后更新:</span>2016年02月26日 - 09时11分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/02/13/js进阶--DOM扩展--元素遍历/" title="js进阶--DOM扩展--&gt;元素遍历">http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/26/js进阶-练习-textarea字数限制/" title="js进阶-练习-textarea字数限制">http://xudaolong.github.io/2016/02/26/js进阶-练习-textarea字数限制/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/26/js进阶-练习-textarea字数限制/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -274,15 +274,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/02/13/js进阶--提高编码性能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          js进阶--提高编码性能
-        
-      </div>
-    </a>
   
+    <a href="/2016/02/26/js进阶-处理音频/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js进阶--处理音频</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -291,7 +287,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C1_u7684_u904D_u5386"><span class="toc-number">1.</span> <span class="toc-text">常见的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><span class="toc-number">1.1.</span> <span class="toc-text">遍历某元素的所有子元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u73B0_u5728_u7684_u65B9_u6CD5"><span class="toc-number">1.2.</span> <span class="toc-text">现在的方法</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html"><span class="toc-number">2.</span> <span class="toc-text">html</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -353,7 +349,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/02/13/js进阶--DOM扩展--元素遍历/" data-title="js进阶--DOM扩展--&gt;元素遍历" data-url="http://xudaolong.github.io/2016/02/13/js进阶--DOM扩展--元素遍历/"></div>
+    <div class="ds-thread" data-thread-key="2016/02/26/js进阶-练习-textarea字数限制/" data-title="js进阶-练习-textarea字数限制" data-url="http://xudaolong.github.io/2016/02/26/js进阶-练习-textarea字数限制/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -376,13 +372,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/02/13/js进阶--提高编码性能/" title="上一篇: js进阶--提高编码性能">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/02/26/js进阶-处理音频/" title="下一篇: js进阶--处理音频">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-练习-textarea字数限制/">js进阶-练习-textarea字数限制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-处理音频/">js进阶--处理音频</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/vue-js-入门基础/">vue.js-入门基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-隐藏节点/">css进阶--隐藏节点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
