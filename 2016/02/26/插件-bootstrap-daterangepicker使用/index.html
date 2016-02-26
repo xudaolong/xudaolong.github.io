@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://xudaolong.github.io/2016/02/26/插件-bootstrap-daterangepicker使用/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
 <meta property="og:description" content="使用bootstrap-daterangepicker的记录。">
-<meta property="og:updated_time" content="2016-02-26T01:20:34.000Z">
+<meta property="og:updated_time" content="2016-02-26T01:22:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插件-bootstrap-daterangepicker使用">
 <meta name="twitter:description" content="使用bootstrap-daterangepicker的记录。">
@@ -248,7 +248,7 @@
           
         <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init_data</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	$(<span class="string">'#daterangepicker'</span>).daterangepicker(&#123;</span><br><span class="line">	    <span class="string">"showDropdowns"</span>: <span class="literal">true</span>,</span><br><span class="line">	    <span class="string">"autoApply"</span>: <span class="literal">true</span>,</span><br><span class="line">	    <span class="string">"minDate"</span>:<span class="string">"01/01/2015"</span>,</span><br><span class="line">	    <span class="string">"maxDate"</span>:<span class="string">"01/01/2099"</span>,</span><br><span class="line">	    <span class="string">"startDate"</span>: <span class="string">"02/05/2016"</span>,</span><br><span class="line">	    <span class="string">"endDate"</span>: <span class="string">"02/12/2016"</span>,</span><br><span class="line">	    <span class="string">"locale"</span>: &#123;</span><br><span class="line">	    	<span class="comment">//汉化</span></span><br><span class="line">	        <span class="string">"format"</span>: <span class="string">"MM/DD/YYYY"</span>,</span><br><span class="line">	        <span class="string">"separator"</span>: <span class="string">" - "</span>,</span><br><span class="line">	        <span class="string">"applyLabel"</span>: <span class="string">"确认"</span>,</span><br><span class="line">	        <span class="string">"cancelLabel"</span>: <span class="string">"取消"</span>,</span><br><span class="line">	        <span class="string">"fromLabel"</span>: <span class="string">"从"</span>,</span><br><span class="line">	        <span class="string">"toLabel"</span>: <span class="string">"到"</span>,</span><br><span class="line">	        <span class="string">"customRangeLabel"</span>: <span class="string">"Custom"</span>,</span><br><span class="line">	        <span class="string">"daysOfWeek"</span>: [</span><br><span class="line">	            <span class="string">"日"</span>,</span><br><span class="line">	            <span class="string">"一"</span>,</span><br><span class="line">	            <span class="string">"二"</span>,</span><br><span class="line">	            <span class="string">"三"</span>,</span><br><span class="line">	            <span class="string">"四"</span>,</span><br><span class="line">	            <span class="string">"五"</span>,</span><br><span class="line">	            <span class="string">"六"</span></span><br><span class="line">	        ],</span><br><span class="line">	        <span class="string">"monthNames"</span>: [</span><br><span class="line">	            <span class="string">"01"</span>,</span><br><span class="line">	            <span class="string">"02"</span>,</span><br><span class="line">	            <span class="string">"03"</span>,</span><br><span class="line">	            <span class="string">"04"</span>,</span><br><span class="line">	            <span class="string">"05"</span>,</span><br><span class="line">	            <span class="string">"06"</span>,</span><br><span class="line">	            <span class="string">"07"</span>,</span><br><span class="line">	            <span class="string">"08"</span>,</span><br><span class="line">	            <span class="string">"09"</span>,</span><br><span class="line">	            <span class="string">"10"</span>,</span><br><span class="line">	            <span class="string">"11"</span>,</span><br><span class="line">	            <span class="string">"12"</span></span><br><span class="line">	        ],</span><br><span class="line">	        <span class="string">"firstDay"</span>: <span class="number">1</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">start, end, label</span>)</span>&#123;</span><br><span class="line">		<span class="comment">//格式化</span></span><br><span class="line">		start_f = start.format(<span class="string">'YYYY-MM-DD'</span>);</span><br><span class="line">		end_f = end.format(<span class="string">'YYYY-MM-DD'</span>);</span><br><span class="line">		<span class="keyword">if</span>(start_f === end_f )&#123;</span><br><span class="line">		  showHistoryAlarmList(search_request_page,SEARCH_PAGE_SIZE,start_f);</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		  showHistoryAlarmList(search_request_page,SEARCH_PAGE_SIZE,start_f,end_f);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span>=</span><span class="string">"input-prepend input-group"</span> style=<span class="string">"display: inline-flex;top: 2px;height: 24px;float: right;padding-right: 5px;"</span>&gt;</span><br><span class="line">	&lt;input <span class="class"><span class="keyword">type</span>=</span><span class="string">"text"</span> id=<span class="string">"daterangepicker"</span> <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-control animated slideInRight"</span> value=<span class="string">""</span>&gt;</span><br><span class="line">	&lt;span <span class="class"><span class="keyword">class</span>=</span><span class="string">"add-on input-group-addon"</span> style=<span class="string">"width: 43px; right: -4px; position: relative; border: 1px solid #ccc; border-radius: 0;"</span>&gt;</span><br><span class="line">		&lt;a href=<span class="string">"javascript:void(0);"</span>&gt;&lt;i id=<span class="string">"daterangepicker_data"</span> <span class="class"><span class="keyword">class</span>=</span><span class="string">"glyphicon glyphicon-calendar fa fa-calendar"</span>&gt;&lt;/i&gt;&lt;/a&gt;</span><br><span class="line">	&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
+<h2 id="u5B98_u7F51_u94FE_u63A5"><a href="#u5B98_u7F51_u94FE_u63A5" class="headerlink" title="官网链接"></a>官网链接</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http:</span><span class="comment">//www.daterangepicker.com/</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -259,7 +259,7 @@
         <p><span>本文标题:</span><a href="/2016/02/26/插件-bootstrap-daterangepicker使用/">插件-bootstrap-daterangepicker使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
         <p><span>发布时间:</span>2016年02月26日 - 09时15分</p>
-        <p><span>最后更新:</span>2016年02月26日 - 09时20分</p>
+        <p><span>最后更新:</span>2016年02月26日 - 09时22分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/02/26/插件-bootstrap-daterangepicker使用/" title="插件-bootstrap-daterangepicker使用">http://xudaolong.github.io/2016/02/26/插件-bootstrap-daterangepicker使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/26/插件-bootstrap-daterangepicker使用/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -275,6 +275,15 @@
 
 <nav id="article-nav">
   
+    <a href="/2016/02/26/js进阶-预加载图片/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          js进阶--预加载图片
+        
+      </div>
+    </a>
+  
   
     <a href="/2016/02/26/js进阶-练习-textarea字数限制/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">js进阶-练习-textarea字数限制</div>
@@ -288,7 +297,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html"><span class="toc-number">2.</span> <span class="toc-text">html</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html"><span class="toc-number">2.</span> <span class="toc-text">html</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B98_u7F51_u94FE_u63A5"><span class="toc-number">3.</span> <span class="toc-text">官网链接</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -373,7 +382,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/02/26/js进阶-预加载图片/" title="上一篇: js进阶--预加载图片">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -382,7 +393,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/插件-bootstrap-daterangepicker使用/">插件-bootstrap-daterangepicker使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-练习-textarea字数限制/">js进阶-练习-textarea字数限制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-处理音频/">js进阶--处理音频</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/vue-js-入门基础/">vue.js-入门基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-隐藏节点/">css进阶--隐藏节点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-预加载图片/">js进阶--预加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/插件-bootstrap-daterangepicker使用/">插件-bootstrap-daterangepicker使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-练习-textarea字数限制/">js进阶-练习-textarea字数限制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-处理音频/">js进阶--处理音频</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/vue-js-入门基础/">vue.js-入门基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-隐藏节点/">css进阶--隐藏节点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
