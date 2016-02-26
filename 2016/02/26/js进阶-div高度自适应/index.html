@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Valar Morghulis Valar Dohaeris</title>
+  <title>js进阶--div高度自适应 | Valar Morghulis Valar Dohaeris</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记忆 缘分 兴趣">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Valar Morghulis Valar Dohaeris">
-<meta property="og:url" content="http://xudaolong.github.io/index.html">
+  <meta name="description" content="获取浏览器窗口高度并调整div的高度。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js进阶--div高度自适应">
+<meta property="og:url" content="http://xudaolong.github.io/2016/02/26/js进阶-div高度自适应/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
-<meta property="og:description" content="记忆 缘分 兴趣">
+<meta property="og:description" content="获取浏览器窗口高度并调整div的高度。">
+<meta property="og:updated_time" content="2016-02-26T01:30:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Valar Morghulis Valar Dohaeris">
-<meta name="twitter:description" content="记忆 缘分 兴趣">
+<meta name="twitter:title" content="js进阶--div高度自适应">
+<meta name="twitter:description" content="获取浏览器窗口高度并调整div的高度。">
   
     <link rel="alternative" href="/atom.xml" title="Valar Morghulis Valar Dohaeris" type="application/atom+xml">
   
@@ -27,9 +28,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -40,8 +38,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -206,9 +204,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-js进阶-div高度自适应" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js进阶-div高度自适应" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/02/26/js进阶-div高度自适应/" class="article-date">
@@ -224,325 +220,193 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/js进阶-div高度自适应/">js进阶--div高度自适应</a>
+    <h1 class="article-title" itemprop="name">
+      js进阶--div高度自适应
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              获取浏览器窗口高度并调整div的高度。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/javascript/">javascript</a>
     </div>
 
 
-      
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/26/js进阶-div高度自适应/#more">鞠躬尽瘁 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js进阶-预加载图片" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/26/js进阶-预加载图片/" class="article-date">
-      <time datetime="2016-02-26T01:23:21.000Z" itemprop="datePublished">2016-02-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/js进阶-预加载图片/">js进阶--预加载图片</a>
-    </h1>
-  
-
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
           
-              对某些图片进行预先加载。
-          
+        <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//div的高度随 浏览器变化</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findDimensions</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">document</span>.documentElement  &amp;&amp; <span class="built_in">document</span>.documentElement.clientHeight &amp;&amp; <span class="built_in">document</span>.documentElement.clientWidth)&#123;</span><br><span class="line">		news_Height = <span class="built_in">document</span>.documentElement.clientHeight;</span><br><span class="line">		news_Width = <span class="built_in">document</span>.documentElement.clientWidth;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//固定是321 包括下面的分页</span></span><br><span class="line">	<span class="keyword">var</span> new_height = news_Height - <span class="number">419</span> ;</span><br><span class="line">	$(<span class="string">'.news_list_data'</span>).css(<span class="string">'height'</span>,new_height+<span class="string">'px'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/26/js进阶-预加载图片/#more">鞠躬尽瘁 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/02/26/js进阶-div高度自适应/">js进阶--div高度自适应</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
+        <p><span>发布时间:</span>2016年02月26日 - 09时29分</p>
+        <p><span>最后更新:</span>2016年02月26日 - 09时30分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/02/26/js进阶-div高度自适应/" title="js进阶--div高度自适应">http://xudaolong.github.io/2016/02/26/js进阶-div高度自适应/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/26/js进阶-div高度自适应/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/26/js进阶-预加载图片/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js进阶--预加载图片</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-插件-bootstrap-daterangepicker使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/26/插件-bootstrap-daterangepicker使用/" class="article-date">
-      <time datetime="2016-02-26T01:15:03.000Z" itemprop="datePublished">2016-02-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/02/26/js进阶-div高度自适应/" data-title="js进阶--div高度自适应" data-url="http://xudaolong.github.io/2016/02/26/js进阶-div高度自适应/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xudaolong"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/插件-bootstrap-daterangepicker使用/">插件-bootstrap-daterangepicker使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              使用bootstrap-daterangepicker的记录。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/插件/">插件</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bootstrap/">bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件/">插件</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/26/插件-bootstrap-daterangepicker使用/#more">鞠躬尽瘁 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js进阶-练习-textarea字数限制" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/26/js进阶-练习-textarea字数限制/" class="article-date">
-      <time datetime="2016-02-26T01:07:16.000Z" itemprop="datePublished">2016-02-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/js进阶-练习-textarea字数限制/">js进阶-练习-textarea字数限制</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              整理以前的笔记。
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/26/js进阶-练习-textarea字数限制/#more">鞠躬尽瘁 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js进阶-处理音频" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/26/js进阶-处理音频/" class="article-date">
-      <time datetime="2016-02-26T01:00:02.000Z" itemprop="datePublished">2016-02-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/26/js进阶-处理音频/">js进阶--处理音频</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              第一次对音频的处理,只算是一个基础的认识吧。
-          
-      
+            <a href="/2016/02/26/js进阶-预加载图片/" title="下一篇: js进阶--预加载图片">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio/">audio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/02/26/js进阶-处理音频/#more">鞠躬尽瘁 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-div高度自适应/">js进阶--div高度自适应</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-预加载图片/">js进阶--预加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/插件-bootstrap-daterangepicker使用/">插件-bootstrap-daterangepicker使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-练习-textarea字数限制/">js进阶-练习-textarea字数限制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/26/js进阶-处理音频/">js进阶--处理音频</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/16/vue-js-入门基础/">vue.js-入门基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-隐藏节点/">css进阶--隐藏节点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/css进阶-实习中使用的css样式总结/">css进阶--实习中使用的css样式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/jq进阶-解决jq版本冲突/">jq进阶--解决jq版本冲突</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--提高编码性能/">js进阶--提高编码性能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/13/js进阶--DOM扩展--元素遍历/">js进阶--DOM扩展-->元素遍历</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
