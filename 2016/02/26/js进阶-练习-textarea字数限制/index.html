@@ -22,9 +22,9 @@
     <link rel="icon" href="/img/favicon.png">
   
   
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
@@ -247,7 +247,7 @@
       
           
         <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">init_textarea</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//先选出 textarea 和 统计字数 dom 节点</span></span><br><span class="line">    <span class="keyword">var</span> textArea = $(<span class="string">"#news_content"</span>),word = $(<span class="string">".news_content_word"</span>);</span><br><span class="line">    <span class="comment">//调用</span></span><br><span class="line">    statInputNum(textArea,word);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 剩余字数统计</span><br><span class="line"> * 注意 最大字数只需要在放数字的节点哪里直接写好即可 </span><br><span class="line"> */</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">statInputNum</span>(<span class="params">textArea,numItem</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> max = numItem.text(),curLength;</span><br><span class="line">     textArea[<span class="number">0</span>].setAttribute(<span class="string">"maxlength"</span>, max);</span><br><span class="line">     curLength = textArea.val().length;</span><br><span class="line">     numItem.text(max - curLength);</span><br><span class="line">     textArea.on(<span class="string">'input propertychange'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    	 <span class="keyword">if</span>($(<span class="keyword">this</span>).val().length &lt;= max )&#123;</span><br><span class="line">    		 numItem.text(max - $(<span class="keyword">this</span>).val().length);</span><br><span class="line">    	 &#125;</span><br><span class="line">     &#125;);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea id=<span class="string">"news_content"</span> placeholder=<span class="string">"请输入推送的消息"</span> wrap=<span class="string">"hard"</span>&gt;&lt;/textarea&gt;</span><br><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">"tex_black"</span>&gt;&lt;/div&gt;<span class="comment">//预留空白的</span></span><br><span class="line">&lt;span <span class="keyword">class</span>=<span class="string">"wordwrap"</span>&gt;&lt;<span class="keyword">var</span> <span class="keyword">class</span>=<span class="string">" news_content_word"</span> style=<span class="string">"font-style: normal;color: #A9A9A9;"</span>&gt;<span class="number">140</span>&lt;/<span class="keyword">var</span>&gt;/<span class="number">140</span>&lt;/span&gt;<span class="comment">//浮动模块</span></span><br></pre></td></tr></table></figure>
+<h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea id=<span class="string">"news_content"</span> placeholder=<span class="string">"请输入推送的消息"</span> wrap=<span class="string">"hard"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"tex_black"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><span class="comment">//预留空白的</span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"wordwrap"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">var</span> <span class="attr">class</span>=<span class="string">" news_content_word"</span> <span class="attr">style</span>=<span class="string">"font-style: normal;color: #A9A9A9;"</span>&gt;</span>140<span class="tag">&lt;/<span class="name">var</span>&gt;</span></span><span class="regexp">/140&lt;/</span>span&gt;<span class="comment">//浮动模块</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -309,7 +309,7 @@
 
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script>
     var valueHide = "隐藏目录";
     var valueShow = "显示目录";
@@ -455,8 +455,8 @@
 </footer>
 
     </div>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
     <script>
         $(document).ready(function() {

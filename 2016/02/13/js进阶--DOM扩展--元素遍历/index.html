@@ -22,9 +22,9 @@
     <link rel="icon" href="/img/favicon.png">
   
   
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
@@ -246,8 +246,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="u5E38_u89C1_u7684_u904D_u5386"><a href="#u5E38_u89C1_u7684_u904D_u5386" class="headerlink" title="常见的遍历"></a>常见的遍历</h2><h3 id="u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><a href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20" class="headerlink" title="遍历某元素的所有子元素"></a>遍历某元素的所有子元素</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastChild)&#123;</span><br><span class="line">    <span class="keyword">if</span>(child.nodeType == <span class="number">1</span>)&#123; <span class="comment">//检查是不是元素</span></span><br><span class="line">        processChild(child);</span><br><span class="line">    &#125;</span><br><span class="line">    child = child.nextSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="u73B0_u5728_u7684_u65B9_u6CD5"><a href="#u73B0_u5728_u7684_u65B9_u6CD5" class="headerlink" title="现在的方法"></a>现在的方法</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> i,len,child</span> = element.firstelementChild;</span><br><span class="line"><span class="keyword">while</span>(child != element.lastelementChild)&#123;</span><br><span class="line">    processChild(child);  <span class="comment">//已经知道是元素</span></span><br><span class="line">    child = child.nextelementSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="u5E38_u89C1_u7684_u904D_u5386"><a href="#u5E38_u89C1_u7684_u904D_u5386" class="headerlink" title="常见的遍历"></a>常见的遍历</h2><h3 id="u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20"><a href="#u904D_u5386_u67D0_u5143_u7D20_u7684_u6240_u6709_u5B50_u5143_u7D20" class="headerlink" title="遍历某元素的所有子元素"></a>遍历某元素的所有子元素</h3><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var i,len,child = <span class="literal">element</span>.firstChild;</span><br><span class="line"><span class="keyword">while</span>(child != <span class="literal">element</span>.lastChild)&#123;</span><br><span class="line">    if(child.nodeType == <span class="number">1</span>)&#123; //检查是不是元素</span><br><span class="line">        processChild(child);</span><br><span class="line">    &#125;</span><br><span class="line">    child = child.nextSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u73B0_u5728_u7684_u65B9_u6CD5"><a href="#u73B0_u5728_u7684_u65B9_u6CD5" class="headerlink" title="现在的方法"></a>现在的方法</h3><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var i,len,child = <span class="literal">element</span>.firstelementChild;</span><br><span class="line"><span class="keyword">while</span>(child != <span class="literal">element</span>.lastelementChild)&#123;</span><br><span class="line">    processChild(child);  //已经知道是元素</span><br><span class="line">    child = child.nextelementSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -304,7 +304,7 @@
 
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script>
     var valueHide = "隐藏目录";
     var valueShow = "显示目录";
@@ -448,8 +448,8 @@
 </footer>
 
     </div>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
     <script>
         $(document).ready(function() {

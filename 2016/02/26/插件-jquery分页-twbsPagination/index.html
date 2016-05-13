@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://xudaolong.github.io/2016/02/26/插件-jquery分页-twbsPagination/index.html">
 <meta property="og:site_name" content="Valar Morghulis Valar Dohaeris">
 <meta property="og:description" content="使用twbsPagination的记录。">
-<meta property="og:updated_time" content="2016-02-26T02:24:12.000Z">
+<meta property="og:updated_time" content="2016-02-26T02:25:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插件-jquery分页-twbsPagination">
 <meta name="twitter:description" content="使用twbsPagination的记录。">
@@ -22,9 +22,9 @@
     <link rel="icon" href="/img/favicon.png">
   
   
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
@@ -246,7 +246,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#history-news-pagination'</span>).twbsPagination(&#123;</span><br><span class="line">	first: <span class="string">'|&lt;'</span>,</span><br><span class="line">    last: <span class="string">'&gt;|'</span>,</span><br><span class="line">    prev: <span class="string">'&lt;'</span>,</span><br><span class="line">    next: <span class="string">'&gt;'</span>,</span><br><span class="line">    totalPages: <span class="built_in">Math</span>.ceil(data_total/SEARCH_news_PAGE_SIZE),	<span class="comment">//Math.ceil为向上取整</span></span><br><span class="line">    visiblePages: <span class="number">3</span>,</span><br><span class="line">    startPage: search_news_request_page,</span><br><span class="line">    initiateStartPageClick:<span class="literal">false</span>,    <span class="comment">//初始页面时不执行onPageClick事件</span></span><br><span class="line">    onPageClick: <span class="function"><span class="keyword">function</span> (<span class="params">event, page</span>) </span>&#123;     </span><br><span class="line">    	search_news_request_page = page;</span><br><span class="line">        showHistoryPush_record();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h2 id="u5B98_u65B9_u94FE_u63A5"><a href="#u5B98_u65B9_u94FE_u63A5" class="headerlink" title="官方链接"></a>官方链接</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//github.com/esimakin/twbs-pagination</span></span><br></pre></td></tr></table></figure>
+<h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#history-news-pagination'</span>).twbsPagination(&#123;</span><br><span class="line">	first: <span class="string">'|&lt;'</span>,</span><br><span class="line">    last: <span class="string">'&gt;|'</span>,</span><br><span class="line">    prev: <span class="string">'&lt;'</span>,</span><br><span class="line">    next: <span class="string">'&gt;'</span>,</span><br><span class="line">    totalPages: <span class="built_in">Math</span>.ceil(data_total/SEARCH_news_PAGE_SIZE),	<span class="comment">//Math.ceil为向上取整</span></span><br><span class="line">    visiblePages: <span class="number">3</span>,</span><br><span class="line">    startPage: search_news_request_page,</span><br><span class="line">    initiateStartPageClick:<span class="literal">false</span>,    <span class="comment">//初始页面时不执行onPageClick事件</span></span><br><span class="line">    onPageClick: <span class="function"><span class="keyword">function</span> (<span class="params">event, page</span>) </span>&#123;     </span><br><span class="line">    	search_news_request_page = page;</span><br><span class="line">        showHistoryPush_record();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -257,7 +258,7 @@
         <p><span>本文标题:</span><a href="/2016/02/26/插件-jquery分页-twbsPagination/">插件-jquery分页-twbsPagination</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 许道龙 的个人博客">许道龙</a></p>
         <p><span>发布时间:</span>2016年02月26日 - 10时21分</p>
-        <p><span>最后更新:</span>2016年02月26日 - 10时24分</p>
+        <p><span>最后更新:</span>2016年02月26日 - 10时25分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/02/26/插件-jquery分页-twbsPagination/" title="插件-jquery分页-twbsPagination">http://xudaolong.github.io/2016/02/26/插件-jquery分页-twbsPagination/</a>
             <span class="copy-path" data-clipboard-text="原文: http://xudaolong.github.io/2016/02/26/插件-jquery分页-twbsPagination/　　作者: 许道龙" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -286,7 +287,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B98_u65B9_u94FE_u63A5"><span class="toc-number">1.</span> <span class="toc-text">官方链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">2.</span> <span class="toc-text">js</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -299,7 +300,7 @@
 
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script>
     var valueHide = "隐藏目录";
     var valueShow = "显示目录";
@@ -443,8 +444,8 @@
 </footer>
 
     </div>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
     <script>
         $(document).ready(function() {
